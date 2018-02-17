@@ -38,7 +38,7 @@ func Hexadecimal36(num1 string, num2 string) string {
     //本位进位后为数字的情况
 		} else if x+y+carry>35 && (x+y+carry)%36<10 {
 			result+=strconv.Itoa((x+y+carry)%36)
-      //注意进位的表示方法
+    //注意进位的表示方法
 			carry=(x+y+carry)/36
     //本位进位后为字母的情况
 		} else if x+y+carry>35 && (x+y+carry)%36>=10 {
