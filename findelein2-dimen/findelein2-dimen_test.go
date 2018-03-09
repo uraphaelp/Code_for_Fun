@@ -9,6 +9,7 @@ func TestFindele(t *testing.T) {
 	fmt.Println(Findele(testcase, 4))
 }
 
-//OUTPUT:
+/*OUTPUT:
 true, 4
 false, 5
+*/
