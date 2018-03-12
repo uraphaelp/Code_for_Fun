@@ -9,5 +9,31 @@ func Replacespace1(s string) string {
 }
 
 // no use of any package
-func Replacespace2(s string) string {
+func Replacespace2(str string) {
+/*this method has to apply new space
+pay attention to annotation, that's standard method
+ */
+	/*determine how many spaces
+	count:=0
+	for i:=0; i<len(str); i++ {
+		if str[i]==' ' {
+			count++
+		}
+	}
+	*/
+	var newstr string
+	for i:=len(str)-1; i>=0; i-- {
+		if str[i]!=' ' {
+			newstr=string(str[i])+newstr
+			/*
+			count--;
+			str[i+2*count]='%';
+			str[i+2*count+1]='2';
+			str[i+2*count+2]='0';
+			*/
+		} else{
+			newstr="%20"+newstr
+		}
+	}
+	return newstr
 }
